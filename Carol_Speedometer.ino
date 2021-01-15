@@ -7,9 +7,7 @@ SFE_UBLOX_GPS myGPS;
 #include <Adafruit_SSD1306.h>
 #include "SwitecX25.h"
 #include <SPI.h>
-#include "SdFat.h"
-#include "sdios.h"
-
+#include "SD.h"
 
 long lastTime = 0; //Simple local timer. Limits amount if I2C traffic to Ublox module.
 float distance = 0;
