@@ -7,7 +7,9 @@ SFE_UBLOX_GPS myGPS;
 #include <Adafruit_SSD1306.h>
 #include "SwitecX25.h"
 #include <SPI.h>
-#include "SD.h"
+#include <SD.h>
+
+File myFile;
 
 long lastTime = 0; //Simple local timer. Limits amount if I2C traffic to Ublox module.
 float distance = 0;
@@ -16,7 +18,7 @@ const double StepsPerDegree = 1.9;         // Motor step is 1/3 of a degree of r
 const unsigned int MaxMotorRotation = 315; // 315 max degrees of movement
 const unsigned int MaxMotorSteps = MaxMotorRotation * StepsPerDegree;
 unsigned int motorStep = 0;
-double SpeedoDegreesPerMPH = (132 * StepsPerDegree)/ 120.0;
+double SpeedoDegreesPerMPH = (132 * StepsPerDegree) / 120.0;
 
 //----Define OLED Display Settings------  NOTE.. can do the same without this.. Relocated OLED_Reset
 #define OLED_RESET 4
@@ -47,6 +49,27 @@ void setup()
       ;
   }
 
+  myFile = SD.open("odo.txt");
+  if (myFile)
+  {
+    Serial.println("odo.txt:");
+
+    // read from the file until there's nothing else in it:
+    while (myFile.available())
+    {
+      const stringFromFile = myFile.read();
+      odo = stringFromFile.toFloat();
+      Serial.println("odometer value obtained from SD");
+    }
+    // close the file:
+    myFile.close();
+  }
+  else
+  {
+    // if the file didn't open, print an error:
+    Serial.println("error opening odo.txt");
+  }
+
   // I2C OLED display
   display.begin(SSD1306_SWITCHCAPVCC); // initialize with the I2C addr 0x3C (128x32)
   display.clearDisplay();
@@ -63,9 +86,8 @@ void setup()
   display.println(odo, 1);
   display.display();
 
-
-Motor.zero(); //Initialize stepper at 0 location
-  Motor.setPosition(460);  
+  Motor.zero(); //Initialize stepper at 0 location
+  Motor.setPosition(460);
   Motor.updateBlocking();
   delay(100);
   Motor.setPosition(0); //0MPH
@@ -74,28 +96,28 @@ Motor.zero(); //Initialize stepper at 0 location
   Motor.setPosition(0); //0MPH
   Motor.updateBlocking();
   delay(100);
-//460 is 120
-  //440 is 115    
-  //421 is 110.   
-  //405 is 105. 
-  //382 is 100. 
-  //364 is 95 
-  //347 is 90 
-  //331 is 85 
-  //313 is 80. 
-  //293 is 75  
-  //273 is 70  
+  //460 is 120
+  //440 is 115
+  //421 is 110.
+  //405 is 105.
+  //382 is 100.
+  //364 is 95
+  //347 is 90
+  //331 is 85
+  //313 is 80.
+  //293 is 75
+  //273 is 70
   //257 is 65
-  //237is 60 
-  //215 is 55 
-  //192 is 50 
-  //168 is 45 
-  //147 is 40   
-  //124 is 35 
-  //101 is 30. 
-  //78 is 25 
-  //55 is 20.  
-  //37 is 15 
+  //237is 60
+  //215 is 55
+  //192 is 50
+  //168 is 45
+  //147 is 40
+  //124 is 35
+  //101 is 30.
+  //78 is 25
+  //55 is 20.
+  //37 is 15
   //25 is 10
 }
 
@@ -116,25 +138,28 @@ void loop()
     //TEMP TODO: write speedMPH to the LCD
 
     //map the speedMPH to the stepper position
-    
+
     //speedMPH = 50;
-    
+
     double stepsPerMPH = 5.5;
 
-    if (speedMPH < 20) {
+    if (speedMPH < 20)
+    {
       stepsPerMPH = 2;
-    } else if (speedMPH >= 20 && speedMPH < 40) {
-      stepsPerMPH = 3.2666; 
-    } else if (speedMPH >=40 && speedMPH < 60) {
-      stepsPerMPH = 4.5; 
+    }
+    else if (speedMPH >= 20 && speedMPH < 40)
+    {
+      stepsPerMPH = 3.2666;
+    }
+    else if (speedMPH >= 40 && speedMPH < 60)
+    {
+      stepsPerMPH = 4.5;
     }
 
     motorStep = MphToStep(stepsPerMPH, speedMPH);
     Motor.setPosition(motorStep);
 
-
-
- Motor.updateBlocking();
+    Motor.updateBlocking();
 
     Serial.print(F(" Speed: "));
     Serial.print(speedMPH);
@@ -164,6 +189,34 @@ void loop()
     }
 
     Serial.println();
+  }
+
+  if (millis() - lastTime > (30000))
+  {
+    if (!SD.begin(4))
+    {
+      Serial.println("initialization failed!");
+      while (1)
+        ;
+    }
+    Serial.println("initialization done.");
+
+    myFile = SD.open("odo.txt", FILE_WRITE);
+
+    // if the file opened okay, write to it:
+    if (myFile)
+    {
+      Serial.print("Writing to odo.txt...");
+      myFile.println(odo);
+      // close the file:
+      myFile.close();
+      Serial.println("File written and closed.");
+    }
+    else
+    {
+      // if the file didn't open, print an error:
+      Serial.println("error opening odo.txt");
+    }
   }
 }
 
