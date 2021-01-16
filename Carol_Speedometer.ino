@@ -69,6 +69,7 @@ void setup()
     while (myFile.available())
     {
       odo = myFile.parseFloat();
+      Serial.println(odo, 2);
       Serial.println("odometer value obtained from SD");
     }
     // close the file:
