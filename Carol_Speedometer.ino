@@ -49,15 +49,15 @@ void setup()
       ;
   }
 
-  myFile = SD.open("odo.txt");
+  myFile = SD.open("odometer.txt");
   if (myFile)
   {
-    Serial.println("odo.txt:");
+    Serial.println("odometer.txt:");
 
     // read from the file until there's nothing else in it:
     while (myFile.available())
     {
-      char stringFromFile[] = myFile.read();
+      char stringFromFile[10] = myFile.read();
       odo = stringFromFile.toFloat();
       Serial.println("odometer value obtained from SD");
     }
@@ -67,7 +67,7 @@ void setup()
   else
   {
     // if the file didn't open, print an error:
-    Serial.println("error opening odo.txt");
+    Serial.println("error opening odometer.txt");
   }
 
   // I2C OLED display
@@ -201,12 +201,12 @@ void loop()
     }
     Serial.println("initialization done.");
 
-    myFile = SD.open("odo.txt", FILE_WRITE);
+    myFile = SD.open("odometer.txt", FILE_WRITE);
 
     // if the file opened okay, write to it:
     if (myFile)
     {
-      Serial.print("Writing to odo.txt...");
+      Serial.print("Writing to odometer.txt...");
       myFile.println(odo);
       // close the file:
       myFile.close();
@@ -215,7 +215,7 @@ void loop()
     else
     {
       // if the file didn't open, print an error:
-      Serial.println("error opening odo.txt");
+      Serial.println("error opening odometer.txt");
     }
   }
 }
