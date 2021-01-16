@@ -57,7 +57,7 @@ void setup()
     // read from the file until there's nothing else in it:
     while (myFile.available())
     {
-      const stringFromFile = myFile.read();
+      char stringFromFile[] = myFile.read();
       odo = stringFromFile.toFloat();
       Serial.println("odometer value obtained from SD");
     }
