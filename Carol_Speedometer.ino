@@ -147,7 +147,7 @@ void loop()
     long speed = myGPS.getGroundSpeed();
     float speedMPH = (speed * 0.00223694);
     // distance is equal to the old distance plus the new speed / (polls per second * seconds in an hour)
-    distance = speedMPH >= 0.5 ? distance + (speedMPH / (60 * 60)) : distance;
+    distance = speedMPH >= 0.01 ? distance + (speedMPH / (60 * 60)) : distance;
 
     //TEMP TODO: write speedMPH to the LCD
 
@@ -227,10 +227,6 @@ void loop()
     }
 
     Serial.println();
-  }
-
-  if (millis() - lastTime > (30000))
-  {
   }
 }
 
