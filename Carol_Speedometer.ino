@@ -182,7 +182,7 @@ void loop()
     Serial.print(distance, 6);
     Serial.print(F(" Miles"));
     // every 10th of a mile we change/write the odometer
-    if (odo + distance >= (odo + .01))
+    if (distance >= (odo + .01))
     {
       odo = distance;
       Serial.print(F(" | Odometer: "));
