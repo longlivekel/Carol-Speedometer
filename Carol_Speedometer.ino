@@ -9,7 +9,8 @@ SFE_UBLOX_GPS myGPS;
 #include <SPI.h>
 #include <SD.h>
 
-File myFile;
+File odometerFile;
+File backupFile;
 
 long lastTime = 0; //Simple local timer. Limits amount if I2C traffic to Ublox module.
 float distance = 0;
@@ -59,24 +60,24 @@ void setup()
   }
   Serial.println("initialization done.");
 
-  myFile = SD.open("odometer.txt");
+  odometerFile = SD.open("odometer.txt");
 
-  if (myFile)
+  if (odometerFile)
   {
     Serial.println("odometer.txt:");
 
     // read from the file until there's nothing else in it:
-    if (myFile.available())
+    if (odometerFile.available())
     {
-      odo = myFile.parseFloat();
+      odo = odometerFile.parseFloat();
       Serial.println("whats in the file?");
-      Serial.println(myFile);
+      Serial.println(odometerFile);
       Serial.println("whats in the odo var?");
       Serial.println(odo, 2);
       Serial.println("odometer value obtained from SD");
     }
     // close the file:
-    myFile.close();
+    odometerFile.close();
   }
   else
   {
@@ -197,18 +198,39 @@ void loop()
       }
       Serial.println("initialization done.");
 
+      //remove odometer_backup
+      Serial.println("Removing odometer_backup.txt...");
+      SD.remove("odometer_backup.txt");
+      //open odometer
+      odometerFile = SD.open("odometer.txt");
+      if (odometerFile.available())
+      {
+        //create new odometer_backup with odometer contents
+        backupFile = SD.open("odometer_backup.txt", FILE_WRITE);
+        if (backupFile)
+        {
+          Serial.print("Writing to odometer_backup.txt...");
+          backupFile.println(odometerFile);
+          // close the file:
+          backupFile.close();
+          Serial.println("Backup written and closed.");
+        }
+      }
+
+            //remove odometer
+
       Serial.println("Removing odometer.txt...");
       SD.remove("odometer.txt");
 
-      myFile = SD.open("odometer.txt", FILE_WRITE);
+      odometerFile = SD.open("odometer.txt", FILE_WRITE);
 
       // if the file opened okay, write to it:
-      if (myFile)
+      if (odometerFile)
       {
         Serial.print("Writing to odometer.txt...");
-        myFile.println(odo);
+        odometerFile.println(odo);
         // close the file:
-        myFile.close();
+        odometerFile.close();
         Serial.println("File written and closed.");
       }
       else
