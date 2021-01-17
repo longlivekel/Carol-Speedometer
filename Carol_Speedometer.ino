@@ -66,7 +66,7 @@ void setup()
     Serial.println("odometer.txt:");
 
     // read from the file until there's nothing else in it:
-    while (myFile.available())
+    if (myFile.available())
     {
       odo = myFile.parseFloat();
       Serial.println("whats in the file?");
