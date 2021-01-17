@@ -186,7 +186,7 @@ void loop()
     {
       odo = distance;
       Serial.print(F(" | Odometer: "));
-      Serial.print(odo, 1);
+      Serial.print(odo, 2);
 
       // TODO: write odo to memory
       if (!SD.begin(53))
@@ -223,7 +223,7 @@ void loop()
       //display.setTextColor(WHITE);
       display.clearDisplay();
       display.setCursor(0, 10); // WTF??
-      display.println(odo, 1);
+      display.println(odo, 2);
       display.display();
 
       // NOTE: This will have the disadvantage of losing up to .09 when you shut the car off
