@@ -182,13 +182,37 @@ void loop()
     Serial.print(distance, 6);
     Serial.print(F(" Miles"));
     // every 10th of a mile we change/write the odometer
-    if (distance >= (odo + .1))
+    if (distance >= (odo + .01))
     {
       odo = distance;
       Serial.print(F(" | Odometer: "));
       Serial.print(odo, 1);
 
       // TODO: write odo to memory
+      if (!SD.begin(53))
+      {
+        Serial.println("initialization failed!");
+        while (1)
+          ;
+      }
+      Serial.println("initialization done.");
+
+      myFile = SD.open("odometer.txt", FILE_WRITE);
+
+      // if the file opened okay, write to it:
+      if (myFile)
+      {
+        Serial.print("Writing to odometer.txt...");
+        myFile.println(odo);
+        // close the file:
+        myFile.close();
+        Serial.println("File written and closed.");
+      }
+      else
+      {
+        // if the file didn't open, print an error:
+        Serial.println("error opening odometer.txt");
+      }
 
       // TODO: write odo to LCD
 
@@ -207,30 +231,6 @@ void loop()
 
   if (millis() - lastTime > (30000))
   {
-    if (!SD.begin(4))
-    {
-      Serial.println("initialization failed!");
-      while (1)
-        ;
-    }
-    Serial.println("initialization done.");
-
-    myFile = SD.open("odometer.txt", FILE_WRITE);
-
-    // if the file opened okay, write to it:
-    if (myFile)
-    {
-      Serial.print("Writing to odometer.txt...");
-      myFile.println(odo);
-      // close the file:
-      myFile.close();
-      Serial.println("File written and closed.");
-    }
-    else
-    {
-      // if the file didn't open, print an error:
-      Serial.println("error opening odometer.txt");
-    }
   }
 }
 
