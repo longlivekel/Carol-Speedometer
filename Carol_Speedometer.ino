@@ -197,6 +197,9 @@ void loop()
       }
       Serial.println("initialization done.");
 
+      Serial.println("Removing odometer.txt...");
+      SD.remove("odometer.txt");
+
       myFile = SD.open("odometer.txt", FILE_WRITE);
 
       // if the file opened okay, write to it:
