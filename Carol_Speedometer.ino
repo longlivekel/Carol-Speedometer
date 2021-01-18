@@ -96,8 +96,8 @@ void setup()
 
   display.clearDisplay();
   display.setTextSize(3);
-  display.setCursor(70, 10);
-  display.println(odo, 1);
+  display.setCursor(20, 10);
+  display.println(odo, 2);
   display.display();
 
   Motor.zero(); //Initialize stepper at 0 location
@@ -218,14 +218,14 @@ void loop()
       }
 
       // TODO: write odo to LCD
-
-      //display.setTextSize(3);
-      //display.setTextColor(WHITE);
+/*
+      display.setTextSize(3);
+      display.setTextColor(WHITE);
       display.clearDisplay();
-      display.setCursor(0, 10); // WTF??
+      display.setCursor(20, 10); // WTF??
       display.println(odo, 2);
       display.display();
-
+*/
       // NOTE: This will have the disadvantage of losing up to .09 when you shut the car off
     }
 
