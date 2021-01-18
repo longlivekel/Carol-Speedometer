@@ -1,4 +1,4 @@
-//updating branch test 
+//updating branch test
 #include <Wire.h> //Needed for I2C to GPS
 
 #include "SparkFun_Ublox_Arduino_Library.h" //http://librarymanager/All#SparkFun_Ublox_GPS
@@ -218,15 +218,15 @@ void loop()
         Serial.println("error opening odometer.txt");
       }
 
-      // TODO: write odo to LCD
-/*
+      // TODO: write odo to OLED
+
       display.setTextSize(3);
       display.setTextColor(WHITE);
       display.clearDisplay();
       display.setCursor(20, 10); // WTF??
       display.println(odo, 2);
       display.display();
-*/
+
       // NOTE: This will have the disadvantage of losing up to .09 when you shut the car off
     }
 
