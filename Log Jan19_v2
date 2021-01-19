@@ -1,0 +1,322 @@
+Kel's Speedometer
+Initializing SD card...initialization done.
+odometer.txt:
+whats in the file?
+1
+whats in the odo var?
+10.00
+odometer value obtained from SD
+ Speed: 0.06 (mph) Distance: 10.000019
+ Speed: 0.01 (mph) Distance: 10.000022
+ Speed: 0.02 (mph) Distance: 10.000028
+ Speed: 0.01 (mph) Distance: 10.000031
+ Speed: 0.81 (mph) Distance: 10.000257
+ Speed: 1.87 (mph) Distance: 10.000777
+ Speed: 2.64 (mph) Distance: 10.001510
+ Speed: 2.70 (mph) Distance: 10.002262
+ Speed: 2.86 (mph) Distance: 10.003057
+ Speed: 3.13 (mph) Distance: 10.003926
+ Speed: 3.50 (mph) Distance: 10.004897
+ Speed: 3.19 (mph) Distance: 10.005784
+ Speed: 2.87 (mph) Distance: 10.006580
+ Speed: 2.13 (mph) Distance: 10.007173
+ Speed: 0.83 (mph) Distance: 10.007403
+ Speed: 0.10 (mph) Distance: 10.007431
+ Speed: 1.16 (mph) Distance: 10.007752
+ Speed: 2.85 (mph) Distance: 10.008543
+ Speed: 5.58 (mph) Distance: 10.010094
+ Speed: 8.23 (mph) Distance: 10.012380
+ Speed: 10.76 (mph) Distance: 10.015368
+ Speed: 11.17 (mph) Distance: 10.018470
+ Speed: 9.13 (mph) Distance: 10.021005
+ Speed: 6.20 (mph) Distance: 10.022727
+ Speed: 3.19 (mph) Distance: 10.023614
+ Speed: 3.35 (mph) Distance: 10.024544
+ Speed: 5.11 (mph) Distance: 10.025964
+ Speed: 7.42 (mph) Distance: 10.028025
+ Speed: 9.42 (mph) Distance: 10.030640
+ Speed: 12.34 (mph) Distance: 10.034069
+ Speed: 17.44 (mph) Distance: 10.038914
+ Speed: 22.12 (mph) Distance: 10.045059
+ Speed: 25.55 (mph) Distance: 10.052157
+ Speed: 28.22 (mph) Distance: 10.059997
+ Speed: 29.87 (mph) Distance: 10.068293
+ Speed: 30.88 (mph) Distance: 10.076869
+ Speed: 31.51 (mph) Distance: 10.085621
+ Speed: 32.30 (mph) Distance: 10.094593
+ Speed: 33.29 (mph) Distance: 10.103841 | Odometer: 10.10initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 34.25 (mph) Distance: 10.113354
+ Speed: 34.53 (mph) Distance: 10.122947
+ Speed: 34.84 (mph) Distance: 10.132624
+ Speed: 35.08 (mph) Distance: 10.142370
+ Speed: 35.18 (mph) Distance: 10.152143
+ Speed: 35.42 (mph) Distance: 10.161981
+ Speed: 35.85 (mph) Distance: 10.171938
+ Speed: 35.97 (mph) Distance: 10.181931
+ Speed: 35.74 (mph) Distance: 10.191858
+ Speed: 36.03 (mph) Distance: 10.201865
+ Speed: 36.01 (mph) Distance: 10.211868 | Odometer: 10.21initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 36.62 (mph) Distance: 10.222040
+ Speed: 36.38 (mph) Distance: 10.232147
+ Speed: 36.25 (mph) Distance: 10.242217
+ Speed: 35.95 (mph) Distance: 10.252202
+ Speed: 35.93 (mph) Distance: 10.262184
+ Speed: 36.08 (mph) Distance: 10.272206
+ Speed: 36.40 (mph) Distance: 10.282317
+ Speed: 36.48 (mph) Distance: 10.292450
+ Speed: 36.57 (mph) Distance: 10.302610
+ Speed: 36.52 (mph) Distance: 10.312753 | Odometer: 10.31initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 36.07 (mph) Distance: 10.322772
+ Speed: 35.91 (mph) Distance: 10.332748
+ Speed: 36.17 (mph) Distance: 10.342796
+ Speed: 36.18 (mph) Distance: 10.352848
+ Speed: 36.02 (mph) Distance: 10.362853
+ Speed: 35.73 (mph) Distance: 10.372777
+ Speed: 35.44 (mph) Distance: 10.382622
+ Speed: 35.11 (mph) Distance: 10.392374
+ Speed: 34.77 (mph) Distance: 10.402031
+ Speed: 34.74 (mph) Distance: 10.411681
+ Speed: 35.17 (mph) Distance: 10.421450 | Odometer: 10.42initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 35.16 (mph) Distance: 10.431216
+ Speed: 34.98 (mph) Distance: 10.440932
+ Speed: 35.81 (mph) Distance: 10.450880
+ Speed: 36.30 (mph) Distance: 10.460964
+ Speed: 36.63 (mph) Distance: 10.471138
+ Speed: 37.09 (mph) Distance: 10.481442
+ Speed: 37.42 (mph) Distance: 10.491835
+ Speed: 37.64 (mph) Distance: 10.502291
+ Speed: 37.56 (mph) Distance: 10.512723
+ Speed: 37.64 (mph) Distance: 10.523180 | Odometer: 10.52initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 37.50 (mph) Distance: 10.533596
+ Speed: 37.11 (mph) Distance: 10.543905
+ Speed: 36.41 (mph) Distance: 10.554018
+ Speed: 36.82 (mph) Distance: 10.564245
+ Speed: 37.20 (mph) Distance: 10.574578
+ Speed: 36.84 (mph) Distance: 10.584811
+ Speed: 37.05 (mph) Distance: 10.595103
+ Speed: 37.11 (mph) Distance: 10.605412
+ Speed: 38.31 (mph) Distance: 10.616052
+ Speed: 38.73 (mph) Distance: 10.626811 | Odometer: 10.63initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 39.24 (mph) Distance: 10.637713
+ Speed: 39.30 (mph) Distance: 10.648629
+ Speed: 39.27 (mph) Distance: 10.659538
+ Speed: 39.19 (mph) Distance: 10.670423
+ Speed: 39.47 (mph) Distance: 10.681387
+ Speed: 40.01 (mph) Distance: 10.692502
+ Speed: 39.86 (mph) Distance: 10.703575
+ Speed: 39.72 (mph) Distance: 10.714607
+ Speed: 39.71 (mph) Distance: 10.725636
+ Speed: 39.79 (mph) Distance: 10.736689 | Odometer: 10.74initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 39.55 (mph) Distance: 10.747674
+ Speed: 39.09 (mph) Distance: 10.758532
+ Speed: 38.28 (mph) Distance: 10.769165
+ Speed: 37.71 (mph) Distance: 10.779640
+ Speed: 37.78 (mph) Distance: 10.790133
+ Speed: 37.86 (mph) Distance: 10.800651
+ Speed: 38.48 (mph) Distance: 10.811341
+ Speed: 39.02 (mph) Distance: 10.822179
+ Speed: 39.43 (mph) Distance: 10.833131
+ Speed: 39.66 (mph) Distance: 10.844148 | Odometer: 10.84initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 39.79 (mph) Distance: 10.855201
+ Speed: 39.64 (mph) Distance: 10.866212
+ Speed: 39.69 (mph) Distance: 10.877236
+ Speed: 39.29 (mph) Distance: 10.888151
+ Speed: 38.84 (mph) Distance: 10.898941
+ Speed: 38.71 (mph) Distance: 10.909692
+ Speed: 37.96 (mph) Distance: 10.920238
+ Speed: 38.02 (mph) Distance: 10.930799
+ Speed: 37.82 (mph) Distance: 10.941304
+ Speed: 37.43 (mph) Distance: 10.951702 | Odometer: 10.95initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 37.23 (mph) Distance: 10.962044
+ Speed: 37.45 (mph) Distance: 10.972447
+ Speed: 38.01 (mph) Distance: 10.983005
+ Speed: 38.46 (mph) Distance: 10.993690
+ Speed: 38.84 (mph) Distance: 11.004480
+ Speed: 38.72 (mph) Distance: 11.015235
+ Speed: 38.47 (mph) Distance: 11.025921
+ Speed: 39.02 (mph) Distance: 11.036760
+ Speed: 39.36 (mph) Distance: 11.047694
+ Speed: 39.64 (mph) Distance: 11.058706 | Odometer: 11.06initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 39.28 (mph) Distance: 11.069618
+ Speed: 39.42 (mph) Distance: 11.080567
+ Speed: 38.97 (mph) Distance: 11.091391
+ Speed: 38.44 (mph) Distance: 11.102069
+ Speed: 37.69 (mph) Distance: 11.112539
+ Speed: 36.93 (mph) Distance: 11.122797
+ Speed: 35.90 (mph) Distance: 11.132769
+ Speed: 34.16 (mph) Distance: 11.142257
+ Speed: 32.12 (mph) Distance: 11.151180
+ Speed: 29.79 (mph) Distance: 11.159456 | Odometer: 11.16initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 23.08 (mph) Distance: 11.165865
+ Speed: 17.92 (mph) Distance: 11.170844
+ Speed: 12.64 (mph) Distance: 11.174354
+ Speed: 7.25 (mph) Distance: 11.176369
+ Speed: 3.89 (mph) Distance: 11.177450
+ Speed: 3.33 (mph) Distance: 11.178376
+ Speed: 5.64 (mph) Distance: 11.179942
+ Speed: 5.64 (mph) Distance: 11.181508
+ Speed: 10.80 (mph) Distance: 11.184506
+ Speed: 13.25 (mph) Distance: 11.188187
+ Speed: 16.97 (mph) Distance: 11.192900
+ Speed: 21.09 (mph) Distance: 11.198760
+ Speed: 25.30 (mph) Distance: 11.205786
+ Speed: 28.87 (mph) Distance: 11.213805
+ Speed: 31.96 (mph) Distance: 11.222681
+ Speed: 33.31 (mph) Distance: 11.231936
+ Speed: 33.76 (mph) Distance: 11.241313
+ Speed: 33.84 (mph) Distance: 11.250714
+ Speed: 33.78 (mph) Distance: 11.260096 | Odometer: 11.26initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 34.11 (mph) Distance: 11.269572
+ Speed: 34.03 (mph) Distance: 11.279026
+ Speed: 34.03 (mph) Distance: 11.288479
+ Speed: 34.48 (mph) Distance: 11.298058
+ Speed: 34.83 (mph) Distance: 11.307733
+ Speed: 34.91 (mph) Distance: 11.317431
+ Speed: 34.86 (mph) Distance: 11.327115
+ Speed: 35.07 (mph) Distance: 11.336855
+ Speed: 35.11 (mph) Distance: 11.346608
+ Speed: 35.05 (mph) Distance: 11.356343
+ Speed: 35.02 (mph) Distance: 11.366069 | Odometer: 11.37initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 35.37 (mph) Distance: 11.375895
+ Speed: 35.44 (mph) Distance: 11.385740
+ Speed: 35.33 (mph) Distance: 11.395555
+ Speed: 35.51 (mph) Distance: 11.405419
+ Speed: 35.57 (mph) Distance: 11.415301
+ Speed: 35.35 (mph) Distance: 11.425119
+ Speed: 35.48 (mph) Distance: 11.434973
+ Speed: 35.13 (mph) Distance: 11.444732
+ Speed: 34.95 (mph) Distance: 11.454440
+ Speed: 35.25 (mph) Distance: 11.464232
+ Speed: 36.21 (mph) Distance: 11.474289 | Odometer: 11.47initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 37.36 (mph) Distance: 11.484666
+ Speed: 37.89 (mph) Distance: 11.495190
+ Speed: 38.22 (mph) Distance: 11.505807
+ Speed: 38.40 (mph) Distance: 11.516475
+ Speed: 38.65 (mph) Distance: 11.527212
+ Speed: 39.07 (mph) Distance: 11.538064
+ Speed: 39.33 (mph) Distance: 11.548989
+ Speed: 39.87 (mph) Distance: 11.560063
+ Speed: 40.38 (mph) Distance: 11.571279
+ Speed: 40.97 (mph) Distance: 11.582658 | Odometer: 11.58initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 40.56 (mph) Distance: 11.593924
+ Speed: 40.34 (mph) Distance: 11.605131
+ Speed: 39.83 (mph) Distance: 11.616194
+ Speed: 39.65 (mph) Distance: 11.627207
+ Speed: 39.57 (mph) Distance: 11.638198
+ Speed: 39.11 (mph) Distance: 11.649062
+ Speed: 38.59 (mph) Distance: 11.659782
+ Speed: 38.20 (mph) Distance: 11.670393
+ Speed: 38.03 (mph) Distance: 11.680956
+ Speed: 37.76 (mph) Distance: 11.691445 | Odometer: 11.69initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 36.63 (mph) Distance: 11.701619
+ Speed: 36.19 (mph) Distance: 11.711672
+ Speed: 35.83 (mph) Distance: 11.721624
+ Speed: 35.70 (mph) Distance: 11.731541
+ Speed: 35.64 (mph) Distance: 11.741442
+ Speed: 36.33 (mph) Distance: 11.751535
+ Speed: 36.53 (mph) Distance: 11.761683
+ Speed: 35.92 (mph) Distance: 11.771660
+ Speed: 35.82 (mph) Distance: 11.781610
+ Speed: 35.72 (mph) Distance: 11.791531 | Odometer: 11.79initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 34.77 (mph) Distance: 11.801189
+ Speed: 34.40 (mph) Distance: 11.810744
+ Speed: 33.78 (mph) Distance: 11.820126
+ Speed: 32.15 (mph) Distance: 11.829057
+ Speed: 29.57 (mph) Distance: 11.837272
+ Speed: 25.80 (mph) Distance: 11.844440
+ Speed: 21.80 (mph) Distance: 11.850497
+ Speed: 19.48 (mph) Distance: 11.855908
+ Speed: 16.96 (mph) Distance: 11.860618
+ Speed: 16.86 (mph) Distance: 11.865303
+ Speed: 18.99 (mph) Distance: 11.870576
+ Speed: 21.69 (mph) Distance: 11.876603
+ Speed: 23.88 (mph) Distance: 11.883236
+ Speed: 26.75 (mph) Distance: 11.890666
+ Speed: 29.45 (mph) Distance: 11.898846 | Odometer: 11.90initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 35.58 (mph) Distance: 11.908728
+ Speed: 38.04 (mph) Distance: 11.919295
+ Speed: 38.74 (mph) Distance: 11.930056
+ Speed: 39.92 (mph) Distance: 11.941145
+ Speed: 41.51 (mph) Distance: 11.952677
+ Speed: 42.44 (mph) Distance: 11.964468
+ Speed: 42.38 (mph) Distance: 11.976241
+ Speed: 42.13 (mph) Distance: 11.987943
+ Speed: 42.13 (mph) Distance: 11.999645 | Odometer: 12.00initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 43.75 (mph) Distance: 12.011798
+ Speed: 45.04 (mph) Distance: 12.024310
+ Speed: 46.59 (mph) Distance: 12.037252
+ Speed: 48.22 (mph) Distance: 12.050647
+ Speed: 49.49 (mph) Distance: 12.064394
+ Speed: 50.24 (mph) Distance: 12.078350
+ Speed: 50.72 (mph) Distance: 12.092440
+ Speed: 51.38 (mph) Distance: 12.106713 | Odometer: 12.11initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
+ Speed: 52.55 (mph) Distance: 12.121312
+ Speed: 53.23 (mph) Distance: 12.136096
+ Speed: 53.95 (mph) Distance: 12.151084
+ Speed: 54.59 (mph) Distance: 12.166249
+ Speed: 55.24 (mph) Distance: 12.181593
+ Speed: 55.69 (mph) Distance: 12.197064
+ Speed: 56.11 (mph) Distance: 12.212650 | Odometer: 12.21initialization done.
+Removing odometer.txt...
+Writing to odometer.txt...File written and closed.
+
