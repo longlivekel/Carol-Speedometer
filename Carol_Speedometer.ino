@@ -69,6 +69,7 @@ void setup()
     if (myFile.available())
     {
       odo = myFile.parseFloat();
+      distance = odo;
       Serial.println("whats in the file?");
       Serial.println(myFile);
       Serial.println("whats in the odo var?");
@@ -180,13 +181,13 @@ void loop()
     Serial.print(F(" (mph)"));
     Serial.print(F(" Distance: "));
     Serial.print(distance, 6);
-    Serial.print(F(" Miles"));
+    // Serial.print(F(" : "));
+    // Serial.print((odo + .01), 6);
     // every 10th of a mile we change/write the odometer
-    if (distance >= (odo + .01))
+    if (distance >= (odo + .1))
     {
-      odo = distance;
       Serial.print(F(" | Odometer: "));
-      Serial.print(odo, 2);
+      Serial.print(distance, 2);
 
       // TODO: write odo to memory
       if (!SD.begin(53))
@@ -206,7 +207,7 @@ void loop()
       if (myFile)
       {
         Serial.print("Writing to odometer.txt...");
-        myFile.println(odo);
+        myFile.println(distance);
         // close the file:
         myFile.close();
         Serial.println("File written and closed.");
@@ -223,10 +224,12 @@ void loop()
       //display.setTextColor(WHITE);
       display.clearDisplay();
       display.setCursor(0, 10); // WTF??
-      display.println(odo, 2);
+      display.println(distance, 2);
       display.display();
 
       // NOTE: This will have the disadvantage of losing up to .09 when you shut the car off
+
+      odo = distance;
     }
 
     Serial.println();
