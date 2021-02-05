@@ -22,7 +22,7 @@ state = !state;
 int SomeVariable; // Some Variable 
 int PD_PIN =2; // D2 used for  power-down detection (INT.0)
 
-int EE_ADDR = 0; // The EEPROM address to be used
+int EE_ADDR = 0; // The address of each Data EEPROM command is selected by writing to the EEADDR register. Wont need it
 
 void setup() {
 
