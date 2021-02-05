@@ -16,20 +16,21 @@ state = !state;
 
 
 // Save variables automatically to Arduino EEPROM on power-down
+
 #include <EEPROM.h> // Library comes with Arduino IDE
+
 int SomeVariable; // Some Variable 
 int PD_PIN =2; // D2 used for  power-down detection (INT.0)
+
 int EE_ADDR = 0; // The EEPROM address to be used
+
 void setup() {
+
   EEPROM.get(EE_ADDR, SomeVariable);   // Retrieve last stored value of SomeVariable from EEPROM
  
   attachInterrupt(digitalPinToInterrupt(PD_PIN), PD_ISR,FALLING); // Set-up Interrupt Service Routine (ISR)
 }
+
 void loop() {
   // Do something great
   }
-void PD_ISR () { // ISR to be get called on power-down state
-   
-    EEPROM.put(EE_ADDR, SomeVariable); // Put SomeVariable to the EEPROM
-    
-}
