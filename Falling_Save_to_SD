@@ -61,13 +61,8 @@ void loop()
 void writeToSd()
 {
 
-         if (!SD.begin(4))
-      {
-        Serial.println("initialization failed!");
-        while (1)
-          ;
-      }
-      Serial.println("initialization done.");
+  state = digitalRead(interruptPin);
+  if (state == LOW)
 
   myFile = SD.open("odometer.txt", FILE_WRITE);
 
