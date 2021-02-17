@@ -56,14 +56,14 @@ Serial.begin(9600);
 void loop()
 {
   // Do something great
+   state = digitalRead(interruptPin);
+  if (state == LOW) {
+    writeToSd()
+  }
 }
 
 void writeToSd()
 {
-
-  state = digitalRead(interruptPin);
-  if (state == LOW)
-
   myFile = SD.open("odometer.txt", FILE_WRITE);
 
   // if the file opened okay, write to it:
