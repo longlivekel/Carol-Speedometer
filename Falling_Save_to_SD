@@ -58,7 +58,7 @@ void loop()
   // Do something great
    state = digitalRead(interruptPin);
   if (state == LOW) {
-    writeToSd()
+    writeToSd();
   }
 }
 
