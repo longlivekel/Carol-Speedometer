@@ -1,0 +1,88 @@
+#include <SD.h>
+#include <SPI.h>
+#include <Wire.h>
+File myFile;
+
+int SomeVariable; // Some Variable
+int PD_PIN = 2;   // D2 used for  power-down detection (INT.0)
+const byte interruptPin = 2;
+volatile byte state = LOW;
+const int chipSelect = 4;
+
+long lastTime = 0; //Simple local timer. Limits amount if I2C traffic to Ublox module.
+float distance = 0;
+float odo = 0;
+
+void setup()
+{
+
+  attachInterrupt(digitalPinToInterrupt(interruptPin), writeToSd, FALLING); // Set-up Interrupt Service Routine (ISR)
+
+Serial.begin(9600);
+  Serial.print("Initializing SD card...");
+  
+  if (!SD.begin(4))
+  {
+    Serial.println("initialization failed!");
+    while (1)
+      ;
+  }
+  Serial.println("initialization done.");
+
+  myFile = SD.open("odometer.txt");
+
+  if (myFile)
+  {
+    Serial.println("odometer.txt:");
+
+    // read from the file until there's nothing else in it:
+    if (myFile.available())
+    {
+      odo = myFile.parseFloat();
+      distance = odo;
+      Serial.println("whats in the file?");
+      Serial.println(odo, 2);
+    }
+    // close the file:
+    myFile.close();
+  }
+  else
+  {
+    // if the file didn't open, print an error:
+    Serial.println("error opening odometer.txt");
+  }
+}
+
+void loop()
+{
+  // Do something great
+}
+
+void writeToSd()
+{
+
+         if (!SD.begin(4))
+      {
+        Serial.println("initialization failed!");
+        while (1)
+          ;
+      }
+      Serial.println("initialization done.");
+
+  myFile = SD.open("odometer.txt", FILE_WRITE);
+
+  // if the file opened okay, write to it:
+  if (myFile)
+  {
+    Serial.print("Writing to odometer.txt...");
+    myFile.println("farts " + millis());
+    // close the file:
+    myFile.close();
+    Serial.println("File written and closed.");
+  }
+  else
+  {
+    // if the file didn't open, print an error:
+    Serial.println("error opening odometer.txt");
+  }
+}
